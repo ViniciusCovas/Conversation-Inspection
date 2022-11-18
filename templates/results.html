@@ -1,0 +1,140 @@
+{% extends "public_layout.html" %}
+{% block body %}
+
+<div class="trends">
+    <div class="count-by">
+        <h3>Trends (count when Tweets were created by days)</h3>
+        <div class="display-data-trends">
+            <img src="{{url_for('static', filename='./assets/images/trends_date.png')}}" alt="trends_date">
+        </div>
+    </div>
+    
+    <div class="count-by">
+        <h3>Trends (count when Tweets were created by hours)</h3>
+        <div class="display-data-trends">
+            <img src="{{url_for('static', filename='./assets/images/trends_hour.png')}}" alt="trends_hour">
+        </div>        
+    </div>
+</div>
+
+<hr>
+
+<div class="sentiment-analysis-result">
+    <h3>Sentiment Analysis Result</h3>
+    <div class="sar">
+        <div class="display-sar">
+            <img src="{{url_for('static', filename='./assets/images/sentiment_analysis_graph.png')}}" alt="sentiment_analysis_graph">
+        </div>
+
+        <div class="display-sar">
+            <img src="{{url_for('static', filename='./assets/images/sentiment_analysis_doughnut.png')}}" alt="sentiment_analysis_doughnut">
+        </div>
+
+        <div class="display-sar">
+            <img src="{{url_for('static', filename='./assets/images/sentiment_analysis_polarity_score.png')}}" alt="sentiment_analysis_polarity_score">
+        </div>
+
+    </div>
+</div>
+
+<hr>
+
+<div class="sentiment-analysis-distribution">
+    <h3>Sentiment Analysis Distribution (Polarity Subjectivity)</h3>
+    <div class="display-sad">
+        <img src="{{url_for('static', filename='./assets/images/sentiment_analysis_distribution.png')}}" alt="sentiment_analysis_distribution">
+    </div>
+</div>
+
+
+<hr>
+
+<div class="word-clouds">
+    <div class="common-words">
+        <h3>Common words found in tweets</h3>
+            <div class="display-word-cloud">
+                <img src="{{url_for('static', filename='./assets/images/most_common_words.png')}}" alt="most_common_words">
+            </div>
+    
+            <div class="display-word-cloud">
+                <img src="{{url_for('static', filename='./assets/images/count_unigram.png')}}" alt="count_unigram">
+            </div>
+    </div>
+    <div class="common-words">
+        <h3>All Words Cloud</h3>
+            <div class="display-word-cloud">
+                <img src="{{url_for('static', filename='./assets/images/cloud_uni.png')}}" alt="cloud_uni">
+            </div>
+
+            <div class="display-word-cloud">
+                <img src="{{url_for('static', filename='./assets/images/cloud_all_pol.png')}}" alt="cloud_all_pol">
+            </div>
+    
+            <div class="display-word-cloud">
+                <img src="{{url_for('static', filename='./assets/images/cloud_all_2_pol.png')}}" alt="cloud_all_2_pol">
+            </div>
+    </div>
+</div>
+
+<hr>
+
+
+<div class="polarities">
+    <div class="polarity">
+        <h3>Positive Polarity</h3>
+        <div class="display-polarity">
+            <img src="{{url_for('static', filename='./assets/images/cloud_pos_pol.png')}}" alt="cloud_pos_pol">
+        </div>
+    </div>
+    <div class="polarity">
+        <h3>Neutral Polarity</h3>
+        <div class="display-polarity">
+            <img src="{{url_for('static', filename='./assets/images/cloud_neu_pol.png')}}" alt="cloud_neu_pol">
+        </div>
+    </div>
+    <div class="polarity">
+        <h3>Negative Polarity</h3>
+        <div class="display-polarity">
+            <img src="{{url_for('static', filename='./assets/images/cloud_neg_pol.png')}}" alt="cloud_neg_pol">
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="bigrams-network">
+    <h3>Bigram Networks (Visualize Networks of Bigrams)</h3>
+    <div class="display-bigram">
+        <img src="{{url_for('static', filename='./assets/images/bigrams_network.png')}}" alt="bigrams_network">
+    </div>
+</div>
+
+<hr>
+
+
+<div class="table-most-engagement">
+    <h3>Most Retweet Count For Users and it's respective Text</h3>
+    
+    <div class="table-most-retweeted">
+        {% block table %}
+        {% endblock %}
+    </div>
+    
+</div>
+
+
+<hr>
+
+<div class="endpage">
+    <h1>Need Help to understand all analysis?</h1>
+    <h4>Contact Vinicius Covas</h4>
+
+    <form action="#">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <textarea name="message" id="message" cols="30" rows="20" placeholder="Message"></textarea>
+
+        <button class="submit-btn-message">Send Message</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,235 @@
+{% extends 'public_layout.html' %}
+{% block body %}
+
+<section class="main">
+    <section class="register">
+        <div class="heading-white">
+            <img src="{{url_for('static', filename='./assets/images/company-brand-white.svg')}}" alt="compnay-brand-logo-white" class="heading-logo">
+            <span class="heading-label">An inteliggence created by VLabs</span>
+        </div>
+
+        <h1>Go deeply into this digital conversation.</h1>
+
+        <h4>Create your account today and collect insights in less than 30 seconds.</h4>
+
+        <form action="/register" method="post">
+
+            <div class="form-register">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div class="form-register">
+                <label for="email">Email-ID</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            
+            <div class="form-register">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <div class="form-register">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+            </div>
+
+            <div class="policy">
+                <input type="checkbox" name="policy" id="policy" required>
+                <h4>I agree to all the Terms of <span class="link">condition</span> & <span class="link">Privacy Policy</span> </h4>
+            </div>
+
+            <button type="submit" class="create-account">Create Account</button>
+
+            <h4>Already have an account? <span class="link">Log In</span></h4>
+        </form>
+
+
+
+    </section>
+
+    <section class="home-youtube">
+        <img src="{{url_for('static', filename='./assets/svg/youtube-homepage-icon.svg')}}" alt="youtube-logo" class="youtube-icon">
+
+        <button class="download-report-btn">
+            Download an example report
+        </button>
+
+        <h2>Beyond what is hapenning</h2>
+        <h1>Ask: How it's Happening?</h1>
+
+        <hr>
+
+        <h3>Conversation Inspection is a powerfull tools made by VLabs that help you discovery what is happening around your topic.</h3>
+
+    </section>
+
+</section>
+
+<div class="sub-main">
+    <h1>Choose the plan that's right for your goal.</h1>
+
+    <h4>Get started today selecting the best option for you and accomplish your goal to go deeply into the conversation.</h4>
+
+    <div class="plans">
+        <div class="plan">
+            <img src="{{url_for('static', filename='./assets/svg/plan-path-1.svg')}}" alt="path-design" class="path">
+
+            <img src="{{url_for('static', filename='./assets/svg/plan-icon-1.svg')}}" alt="icon" class="p-icon">
+
+            <div class="label">
+                <div class="label-head">
+                    1 Month access
+                </div>
+                <p class="label-para">
+                    Don't worry, You won't loose your access since the plan automatically renews.
+                </p>
+            </div>
+
+            <p class="plan-price">$5</p>
+            
+            <div class="start-inspect">Start to inspect today.</div>
+            
+            <ul class="benefits">
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Single project use</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Basic dashboard</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>All components included</p>
+                </li>
+                
+            </ul>
+
+        </div>
+
+        <div class="plan">
+            <img src="{{url_for('static', filename='./assets/svg/plan-path-2.svg')}}" alt="path-design" class="path">
+            
+            <img src="{{url_for('static', filename='./assets/svg/plan-icon-2.svg')}}" alt="icon" class="p-icon">
+
+            <p class="popular-tag">Popular</p>
+
+            <div class="label">
+                <div class="label-head">
+                    6 Month access
+                </div>
+                <p class="label-para">
+                    Perfect if you have an on going analysis.
+                </p>
+            </div>
+
+            <p class="plan-price">$20</p>
+
+            <div class="start-inspect">Start to inspect today.</div>
+
+
+            <ul class="benefits">
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Single project use</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Basic dashboard</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>All components included</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Advanced Insights</p>
+                </li>
+                
+            </ul>
+
+        </div>
+
+        <div class="plan">
+            <img src="{{url_for('static', filename='./assets/svg/plan-path-3.svg')}}" alt="path-design" class="path">
+        
+            <img src="{{url_for('static', filename='./assets/svg/plan-icon-3.svg')}}" alt="icon" class="p-icon">
+
+            <div class="label">
+                <div class="label-head">
+                    1 Year access
+                </div>
+                <p class="label-para">
+                    Keep learning from the conversations for all your year.
+                </p>
+            </div>
+            
+            <p class="plan-price">$35</p>
+
+            <div class="start-inspect">Start to inspect today.</div>
+
+
+            <ul class="benefits">
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Single project use</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Basic dashboard</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>All components included</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Advanced Insights</p>
+                </li>
+                <li>
+                    <img src="{{url_for('static', filename='./assets/svg/plan-checkmark.svg')}}" alt="check-icon">
+                    <p>Apps & Integrations</p>
+                </li>
+                
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div id="myModal" class="login-modal">
+   
+    <div class="modal-content">
+
+        <div class="login-header">
+            <img src="{{url_for('static', filename='./assets/images/company-brand-white.svg')}}" alt="company-brand">
+
+            <span class="login-close">&times;</span>
+        </div>
+
+        <form action="/login" class="login" method="post">
+            
+            <div class="login-email">
+                <label for="login_email">Email</label>
+                <input type="email" name="login_email" id="login_email" required>
+            </div>
+
+            <div class="login-password">
+                <label for="login_password">Password</label>
+                <input type="password" name="login_password" id="login_password" required>
+            </div>
+            
+
+            <button type="submit" class="submit-btn">Submit</button>
+
+        </form>
+    </div>
+</div> 
+
+<!-- 
+<script src="{{url_for('static', filename='./js/script.js')}}"></script> -->
+
+{% endblock %}

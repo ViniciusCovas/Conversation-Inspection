@@ -27,7 +27,11 @@ tasks = []
 
 @app.route("/")
 def homepage():
-    return render_template("registration.html")
+    email = session.get('email')
+    if email != None:
+        return redirect("/search_data")
+    else:
+        return render_template("registration.html")
 
 # add database so that it'll be secure to maintain users
 @app.route("/register", methods=["POST"])
